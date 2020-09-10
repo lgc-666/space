@@ -1,0 +1,77 @@
+/*消除左右滑轮*/
+body {
+    overflow-x: hidden;
+}
+
+/*前台页脚*/
+footer.main-footer {
+    position: absolute;
+    /*bottom:0;*/
+    margin: 0;
+    width: 100%;
+    background: #2f333e;
+    color: #fff;
+    padding: 20px 10px;
+}
+
+/*前台底线*/
+.wrapper {
+    text-align: center;
+}
+
+.wrapper .line {
+    width: 40%;
+    display: inline-block;
+    border: 0.4px solid #ddd;
+    vertical-align: middle;
+}
+
+.wrapper .content {
+    color: #ccc;
+    font-size: 14px;
+}
+
+
+/*单个产品列表卡片*/
+div.productItem div.productInfo{
+    display: inline-block;
+    border-top-width: 3px;
+    border-top-style: solid;
+    border-top-color: #000000;
+    color: #000000;
+    padding-bottom: 0px;
+}
+div.productItem span.productDealNumber{
+    font-weight: bold;
+    color: #B57C5B;
+}
+div.productItem span.productReview{
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: #EEEEEE;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: #EEEEEE;
+}
+div.productItem span.productReviewNumber{
+    font-weight: bold;
+    color: #3388BB;
+}
+div.productItem span.monthDeal{
+    display: inline-block;
+    height:29px;
+    width: 60px;
+    padding-top: 2px;
+    padding-left: 5px;
+}
+div.productItem span.productReview{
+    display: inline-block;
+    height:29px;
+    width: 80px;
+    padding-top: 2px;
+    padding-left: 5px;
+}
+div.productItem span.wangwang{
+    padding-left: 3px;
+}
+

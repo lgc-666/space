@@ -1,0 +1,49 @@
+<div th:fragment="html">
+    <div class="homepageCategoryProducts">
+        <div class="eachHomepageCategoryProducts" v-for="c in categories">
+            <div class="left-mark"></div>
+              <a :href="'category?cid='+c.id">
+                 <span class="categoryTitle">{{c.name}}</span>
+              </a>
+            <br>
+            <div class="productItem"  v-for="p,index in c.products" v-if="index<5" >
+                <a :href="'product?pid='+p.id">
+                    <img width="100px" :src="'img/productSingle_middle/'+p.firstProductImage.id+'.jpg'">
+                </a>
+
+                <a class="productItemDescLink" :href="'product?pid='+p.id">
+									<span class="productItemDesc">名称：
+									{{p.name | subStringFilter(0,20)}}
+									</span>
+                                    <span class="productItemDesc2">
+									{{p.subTitle | subStringFilter(0,28)}}
+									</span>
+                </a>
+                <span class="productPrice">
+									{{p.promotePrice | formatMoneyFilter}} 起
+                </span>
+
+                <div class="show1 productInfo">
+                    <span class="monthDeal ">剩余量 <span class="productDealNumber">{{p.stock}}</span></span>
+                    <span class="productReview">原价 <span class="productReviewNumber">{{p.originalPrice}}</span></span>
+                    <span class="wangwang">
+                        <a class="wangwanglink" href="#nowhere">
+                            <img src="img/site/chat2.png" style="width: 22px;height: 22px">
+                        </a>
+                    </span>
+                </div>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <br>
+        <br>
+        <br>
+        <span class="line"></span>
+        <span class="content">我是有底线的</span>
+        <span class="line"></span>
+        <br>
+        <br>
+    </div>
+</div>
